@@ -1,0 +1,224 @@
+<style>
+    .custom-code-container {
+        position: relative;
+        background: #ffffff;
+        border: 1px solid #dcdcdc;
+        border-radius: 8px;
+        padding: 10px;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .custom-code-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #eaeaea;
+      }
+
+      .custom-code-header-title {
+        margin: 0;
+        font-size: 1.2rem;
+        font-family: system-ui;
+        font-weight: 700;
+        color: #333;
+      }
+
+      .custom-copy-button {
+        background-color: transparent;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 5px;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        display: flex;
+        align-items: center;
+      }
+
+      .custom-copy-button:hover {
+        background-color: #f9f9f9;
+        border-color: #ccc;
+      }
+
+      .custom-copy-button.copied {
+        background-color: #0087fc;
+        border-color: #0087fc;
+        color: #fff;
+      }
+
+      .custom-copy-icon {
+        width: 18px;
+        height: 18px;
+        color: currentColor;
+      }
+
+      .custom-code-block {
+        padding: 10px;
+        border-radius: 4px;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+        color: #333;
+        overflow-x: auto;
+        margin-top: 10px;
+      }
+
+      .custom-toast {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: white;
+        padding: 12px 20px;
+        font-size: 1rem;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease, visibility 0s 0.5s;
+        z-index: 9999;
+      }
+
+      .custom-toast.show {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease;
+      }
+
+      .custom-toast.success {
+        background-color: #0087fc;
+      }
+
+      .custom-toast.error {
+        background-color: #dc3545;
+      }
+
+      .custom-toast.info {
+        background-color: #17a2b8;
+      }
+      
+</style>
+
+<!-- Hộp Code (Nhớ thay đổi id custom-code-content1)-->
+<div>
+  <div class="custom-code-container">
+    <div class="custom-code-header">
+      <h3 class="custom-code-header-title" style="margin: 0;">JavaScript Code</h3>
+      <button class="custom-copy-button" data-target="custom-code-content1">
+        <svg
+             xmlns="http://www.w3.org/2000/svg"
+             class="custom-copy-icon"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             >
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Thêm bất cứ code nào bạn muốn -->
+    <div id="custom-code-content1" class="custom-code-block">
+      <!-- Thay đổi định dạng ngôn ngữ sau class "language-" -->
+      <pre><code class="language-js">function checkNumber(num) {
+    if (num < 0) {
+        return "Negative Number";
+    } else if (num > 0) {
+        return "Positive Number";
+    } else {
+        return "Zero";
+    }
+  }
+
+  console.log(checkNumber(-5)); 
+  console.log(checkNumber(10)); 
+  console.log(checkNumber(0));</code></pre>
+      </div>
+  </div>
+    
+    
+  <!--Code HTML (Thay đổi dấu "<" thành "&lt;", ">" thành "&gt;" để không bị lỗi)-->  
+  <div class="custom-code-container">
+    <div class="custom-code-header">
+      <h3 class="custom-code-header-title" style="margin: 0;">HTML Code</h3>
+      <button class="custom-copy-button" data-target="custom-code-content2">
+        <svg
+             xmlns="http://www.w3.org/2000/svg"
+             class="custom-copy-icon"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             >
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Thêm bất cứ code nào bạn muốn -->
+    <div id="custom-code-content2" class="custom-code-block">
+        <!-- Thay đổi định dạng ngôn ngữ sau class "language-" -->
+        <pre><code class="language-html">&lt;div class="custom-code-container"&gt;
+    &lt;div class="custom-code-header"&gt;
+    	&lt;h3 class="custom-code-header-title" style="margin: 0"&gt;JavaScript Code&lt;/h3&gt;
+    	&lt;button class="custom-copy-button" data-target="custom-code-content1"&gt;
+        	&lt;svg
+        		xmlns="http://www.w3.org/2000/svg"
+      	  		class="custom-copy-icon"
+       	 		viewBox="0 0 24 24"
+        		fill="none"
+        		stroke="currentColor"
+        		stroke-width="2"
+        		stroke-linecap="round"
+       	 		stroke-linejoin="round"
+       	 	&gt;
+       	 	&lt;rect x="9" y="9" width="13" height="13" rx="2" ry="2"&gt;&lt;/rect&gt;
+       	 	&lt;path
+      	     	d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+     	 	&gt;&lt;/path&gt;
+       	 	&lt;/svg&gt;
+    	&lt;/button&gt;
+   	&lt;/div&gt;
+
+    &lt;!-- Thêm bất cứ code nào bạn muốn --&gt;
+    &lt;div id="custom-code-content1" class="custom-code-block"&gt;
+    &lt;!-- Thay đổi định dạng ngôn ngữ sau class "language-"--&gt;
+        &lt;pre&gt;&lt;code class="language-js"&gt;function checkNumber(num) {
+  if (num &lt; 0) {
+      return "Negative Number";
+  } else if (num &gt; 0) {
+      return "Positive Number";
+  } else {
+      return "Zero";
+  }
+}
+
+console.log(checkNumber(-5)); 
+console.log(checkNumber(10)); 
+console.log(checkNumber(0));&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Hiện Thông Báo --&gt;
+&lt;div id="custom-toast" class="custom-toast"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+
+
+  <!-- Hiện Thông Báo -->
+  <div id="custom-toast" class="custom-toast"></div>
+</div>
+
+  
